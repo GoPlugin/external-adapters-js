@@ -1,0 +1,45 @@
+{
+  "name": "@plugin/multi-address-list-adapter",
+  "version": "1.0.6",
+  "description": "Plugin multi-address-list adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "blockchain",
+    "oracle",
+    "multi-address-list"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.11.68",
+    "@types/node-schedule": "2.1.7",
+    "nock": "13.5.5",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "@plugin/anchorage-adapter": "workspace:*",
+    "@plugin/bitgo-adapter": "workspace:*",
+    "@plugin/coinbase-prime-adapter": "workspace:*",
+    "@plugin/external-adapter-framework": "1.7.1",
+    "node-schedule": "2.1.1",
+    "tslib": "2.4.1"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@plugin/dlc-btc-por-adapter",
+  "version": "4.3.2",
+  "description": "Plugin dlc-btc-por adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "blockchain",
+    "oracle",
+    "dlc-btc-por"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "bitcoinjs-lib": "6.1.6",
+    "nock": "13.5.5",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "@bitcoinerlab/secp256k1": "1.1.1",
+    "@plugin/external-adapter-framework": "1.7.1",
+    "@noble/hashes": "1.4.0",
+    "@scure/base": "1.1.9",
+    "@scure/btc-signer": "1.2.2",
+    "bip32": "4.0.0",
+    "ethers": "^5.4.6",
+    "tslib": "2.4.1"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "@plugin/set-token-index-adapter",
+  "version": "3.0.14",
+  "description": "Plugin set-token-index adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "BTC",
+    "Bitcoin",
+    "blockchain",
+    "oracle",
+    "set-token-index"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "dependencies": {
+    "@plugin/ea-bootstrap": "workspace:*",
+    "@plugin/ea-test-helpers": "workspace:*",
+    "@plugin/token-allocation-adapter": "workspace:*",
+    "bignumber.js": "9.1.2",
+    "ethers": "^5.4.6",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "@types/supertest": "2.0.16",
+    "nock": "13.5.5",
+    "supertest": "6.2.4",
+    "typescript": "5.6.3"
+  }
+}

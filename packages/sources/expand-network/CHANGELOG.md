@@ -1,0 +1,27 @@
+# @plugin/expand-network-adapter
+
+## 0.1.3
+
+### Patch Changes
+
+- [#3534](https://github.com/goplugin/external-adapters-js/pull/3534) [`d8023b9`](https://github.com/goplugin/external-adapters-js/commit/d8023b911fd37ccdc2b41788b072fb9c875fff31) Thanks [@renovate](https://github.com/apps/renovate)! - Bump nock
+
+## 0.1.2
+
+### Patch Changes
+
+- [#3530](https://github.com/goplugin/external-adapters-js/pull/3530) [`690c025`](https://github.com/goplugin/external-adapters-js/commit/690c025c0a3e0863679418d26dc41c8b662978d8) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- [#3260](https://github.com/goplugin/external-adapters-js/pull/3260) [`13cfd21`](https://github.com/goplugin/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627) Thanks [@renovate](https://github.com/apps/renovate)! - Bump TS version
+
+## 0.1.1
+
+### Patch Changes
+
+- [#3480](https://github.com/goplugin/external-adapters-js/pull/3480) [`13c68c5`](https://github.com/goplugin/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+## 0.1.0
+
+### Minor Changes
+
+- [#3467](https://github.com/goplugin/external-adapters-js/pull/3467) [`d1918f6`](https://github.com/goplugin/external-adapters-js/commit/d1918f6c3f4049f4f0ec12763b9c8933c50b06c3) Thanks [@AtanasKrondev](https://github.com/AtanasKrondev)! - Add adapter for expand network.

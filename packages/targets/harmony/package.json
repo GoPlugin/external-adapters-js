@@ -1,0 +1,47 @@
+{
+  "name": "@plugin/harmony-adapter",
+  "version": "1.1.36",
+  "description": "Plugin harmony adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "blockchain",
+    "oracle",
+    "harmony"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "dependencies": {
+    "@plugin/ea-bootstrap": "workspace:*",
+    "@plugin/ea-test-helpers": "workspace:*",
+    "@harmony-js/core": "0.1.57",
+    "@harmony-js/crypto": "^0.1.56",
+    "@harmony-js/utils": "^0.1.56",
+    "ethers": "5.4.7",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "@types/supertest": "2.0.16",
+    "nock": "13.5.5",
+    "supertest": "6.2.4",
+    "typescript": "5.6.3"
+  }
+}

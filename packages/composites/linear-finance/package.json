@@ -1,0 +1,50 @@
+{
+  "name": "@plugin/linear-finance-adapter",
+  "version": "2.3.95",
+  "description": "Plugin linear-finance adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "BTC",
+    "Bitcoin",
+    "blockchain",
+    "oracle",
+    "linear-finance"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "dependencies": {
+    "@plugin/ea-bootstrap": "workspace:*",
+    "@plugin/token-allocation-adapter": "workspace:*",
+    "csv-parse": "^4.16.0",
+    "decimal.js": "^10.3.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.34",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@plugin/ea-test-helpers": "workspace:*",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "@types/supertest": "2.0.16",
+    "nock": "13.5.5",
+    "supertest": "6.2.4",
+    "typescript": "5.6.3"
+  }
+}

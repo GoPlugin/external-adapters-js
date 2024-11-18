@@ -1,0 +1,45 @@
+{
+  "name": "@plugin/celsius-address-list-adapter",
+  "version": "2.0.20",
+  "description": "Plugin Celsius Address List Adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "blockchain",
+    "oracle",
+    "Celsius",
+    "celsius-address-list"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "dependencies": {
+    "@plugin/ea-bootstrap": "workspace:*",
+    "@plugin/ea-test-helpers": "workspace:*",
+    "ethers": "5.4.7",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "@types/supertest": "2.0.16",
+    "nock": "13.5.5",
+    "supertest": "6.2.4",
+    "typescript": "5.6.3"
+  }
+}

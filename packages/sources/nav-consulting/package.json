@@ -1,0 +1,44 @@
+{
+  "name": "@plugin/nav-consulting-adapter",
+  "version": "1.0.1",
+  "description": "Plugin nav-consulting adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "blockchain",
+    "oracle",
+    "nav-consulting"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "devDependencies": {
+    "@date-fns/utc": "2.1.0",
+    "@types/crypto-js": "4.2.2",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "crypto-js": "4.2.0",
+    "date-fns": "4.1.0",
+    "nock": "13.5.5",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "@plugin/external-adapter-framework": "1.7.1",
+    "tslib": "2.4.1"
+  }
+}

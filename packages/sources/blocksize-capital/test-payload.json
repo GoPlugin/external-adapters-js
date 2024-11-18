@@ -1,0 +1,18 @@
+{
+ "requests": [
+    {
+      "from": "PLI",
+      "to": "USD"
+    },
+    {
+      "from": "PLI",
+      "to": "USD",
+      "endpoint": "cryptolwba"
+    },
+    {
+      "from": "AMPL",
+      "to": "USD",
+      "endpoint": "vwap"
+    }
+  ]
+}

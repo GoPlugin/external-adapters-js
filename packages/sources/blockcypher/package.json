@@ -1,0 +1,49 @@
+{
+  "name": "@plugin/blockcypher-adapter",
+  "version": "1.4.36",
+  "description": "Plugin adapter to query BTC address balance from blockcypher.com.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "wBTC",
+    "BTC",
+    "blockchain",
+    "oracle",
+    "Proof of Reserves",
+    "blockcypher.com"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "author": "Kristijan Rebernisak <kristijan.rebernisak@smartcontract.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "dependencies": {
+    "@plugin/ea-bootstrap": "workspace:*",
+    "@plugin/ea-factories": "workspace:*",
+    "@plugin/ea-test-helpers": "workspace:*",
+    "blockcypher": "^0.3.0",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "@types/supertest": "2.0.16",
+    "nock": "13.5.5",
+    "supertest": "6.2.4",
+    "typescript": "5.6.3"
+  }
+}

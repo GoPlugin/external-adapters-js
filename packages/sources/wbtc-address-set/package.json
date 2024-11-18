@@ -1,0 +1,43 @@
+{
+  "name": "@plugin/wbtc-address-set-adapter",
+  "version": "2.1.9",
+  "description": "Plugin adapter to query wBTC address set.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "wBTC",
+    "BTC",
+    "blockchain",
+    "oracle",
+    "Proof of Reserves"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "author": "Kristijan Rebernisak <kristijan.rebernisak@smartcontract.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "nock": "13.5.5",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "@plugin/external-adapter-framework": "1.7.1",
+    "tslib": "2.4.1"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@plugin/dydx-stark-adapter",
+  "version": "2.0.16",
+  "description": "Plugin dydx-stark adapter.",
+  "keywords": [
+    "Plugin",
+    "PLI",
+    "blockchain",
+    "oracle",
+    "dydx-stark"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/goplugin/external-adapters-js",
+    "type": "git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist && rm -f tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "tsc -b",
+    "server": "node -e 'require(\"./index.js\").server()'",
+    "server:dist": "node -e 'require(\"./dist/index.js\").server()'",
+    "start": "yarn server:dist"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.119",
+    "nock": "13.5.5",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "@authereum/starkware-crypto": "1.9.7-beta.7",
+    "@plugin/external-adapter-framework": "1.7.1",
+    "decimal.js": "10.3.1",
+    "ethers": "5.4.7",
+    "tslib": "2.4.1"
+  }
+}
